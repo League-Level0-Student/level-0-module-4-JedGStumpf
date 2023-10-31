@@ -3,6 +3,8 @@ package _02_boolean._5_googly_eyes;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+
+import java.awt.event.*;
 /*
  * Goal: Put googly eyes on a face!
  * 
@@ -49,15 +51,28 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
+    	size(WIDTH, HEIGHT);
+    	face = loadImage("cat.jpg");
+    	face.resize(WIDTH, HEIGHT);
+    	background(face);
+
+    	
+
+    	
 
     }
 
     @Override
     public void draw() {
-
-    }
+    	if (mousePressed) {
+    		System.out.println(mouseX + " " + mouseY);
+//    		System.out.println(mouseY);
+    	}
+//    	ellipse(mouseX, mouseY, 50, 50);
+    } 
 
     static public void main(String[] args) {
         PApplet.main(GooglyEyes.class.getName());
+        
     }
 }

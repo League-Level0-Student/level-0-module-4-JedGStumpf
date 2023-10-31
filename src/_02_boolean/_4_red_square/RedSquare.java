@@ -15,7 +15,7 @@ public class RedSquare {
 	
 	public static void main(String[] args) {
 		
-		boolean isRed = false;
+		boolean isRed = true;
 		boolean isSquare = true;
 		
 		// The && shown here means that both booleans must be true for the 
@@ -36,6 +36,13 @@ public class RedSquare {
 		// 3. Write an else if statement after the if statement that calls 
 		//    drawBlueSquare if isRed is false AND isSquare is true. 
 		//    Hint: Use ! and &&.
+		if (!isRed && isSquare) {
+			drawBlueSquare();
+		} else if (isRed && !isSquare) {
+			drawRedTriangle();
+		} else if (!isRed && !isSquare) {
+			drawBlueTriangle();
+		}
 		
 		// 4. Write an else if statement that calls drawRedTriangle() if isRed
 		//    is true and isSquare is false.
